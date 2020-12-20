@@ -26,13 +26,13 @@ float testVB_ventedbox() {
 float testFb_ventedbox() {
     TVentedBox* ventedBox = setupVentedBox();
     
-    return std::fabs(ventedBox->getFB() - 43.1f);
+    return std::fabs(ventedBox->getFB() - 24.26f);
 }
 
 float testF3_ventedbox() {
     TVentedBox* ventedBox = setupVentedBox();
     
-    return std::fabs(ventedBox->getF3() - 42.2f);
+    return std::fabs(ventedBox->getF3() - 17.25f);
 }
 
 float testFb_custom_ventedbox() {

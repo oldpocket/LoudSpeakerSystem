@@ -20,5 +20,6 @@ public:
     float getA();
     float getFC();
     float getQTC();
+    // System cut-off frequency (f3)
     float getF3();
 };

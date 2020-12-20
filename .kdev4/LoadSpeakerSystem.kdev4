@@ -15,5 +15,26 @@ Name=GCC
 [CustomDefinesAndIncludes][ProjectPath0][Includes]
 1=/home/aethiopicus/Development/GitHub/LoadSpeakerSystem/include
 
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Compiled Binary Launcher
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/aethiopicus/Development/GitHub/LoadSpeakerSystem/bin/main
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=
+isExecutable=true
+
 [Project]
 VersionControlSupport=kdevgit

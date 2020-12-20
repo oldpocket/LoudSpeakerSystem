@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 #include "TVentedBox.hpp"
 #include "OPExceptions.hpp"
 #include "OPMacros.hpp"
@@ -44,15 +44,15 @@ float TVentedBox::getF3() {
     if (vb == 0)
         return .26 * pow(driver.getQTS(), -1.4) * driver.fs;
     
-    return driver.fs * SQR( driver.getVAS() / vb);
+    return driver.fs * sqrt( driver.getVAS() / vb);
 }
 
 
 float TVentedBox::getFB() {
-    
+
     if (vb == 0)
         return .42 * pow(driver.getQTS(), -.9) * driver.fs;
-    
+
     return driver.fs * pow( driver.getVAS() / vb, .32);
 }
 
