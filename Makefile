@@ -19,7 +19,7 @@ run: clean all
 	clear
 	./$(BIN)/$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(filter-out $(SRC)/testTDriver.cpp $(SRC)/testTClosedBox.cpp, $(wildcard $(SRC)/*.cpp))
+$(BIN)/$(EXECUTABLE): $(filter-out $(SRC)/testTDriver.cpp $(SRC)/testTClosedBox.cpp $(SRC)/testTVentedBox.cpp, $(wildcard $(SRC)/*.cpp))
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
 
 $(BIN)/$(UNIT_TEST): $(SRC)/test*.cpp $(SRC)/T*.cpp

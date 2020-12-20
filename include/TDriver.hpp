@@ -32,8 +32,9 @@ public:
     float tvb;
     // Driver Resonance in Test Box
     float tfs;
-
+    // Driver's resonance magnification at Fs
     float getQTS(); 
+    // Driver's compliance, stated in terms of the air volume that has an equivalent compliance for that driver
     float getVAS();
     float getQMS();
 

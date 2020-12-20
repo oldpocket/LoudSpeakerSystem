@@ -18,32 +18,32 @@ TClosedBox* setupClosedBox() {
     return closedBox;
 }
 
-float testQTC() {
+float testQTC_closedbox() {
     TClosedBox* closedBox = setupClosedBox();
     
     return std::fabs(closedBox->getQTC() - 1.0f);
 }
 
-float testFC() {
+float testFC_closedbox() {
     TClosedBox* closedBox = setupClosedBox();
     
     return std::fabs(closedBox->getFC() - 59.0f);
 }
 
-float testF3() {
+float testF3_closedbox() {
     TClosedBox* closedBox = setupClosedBox();
     
     return std::fabs(closedBox->getF3() - 46.4f);
 }
 
 TEST_CASE( "ClosedBox QTC calculated", "[closedbox]" ) {
-    REQUIRE( testQTC() < 0.05 );
+    REQUIRE( testQTC_closedbox() < 0.05 );
 }
 
 TEST_CASE( "ClosedBox FC calculated", "[closedbox]" ) {
-    REQUIRE( testFC() < 1.1 );
+    REQUIRE( testFC_closedbox() < 1.1 );
 }
 
 TEST_CASE( "ClosedBox F3 calculated", "[closedbox]" ) {
-    REQUIRE( testF3() < 0.5 );
+    REQUIRE( testF3_closedbox() < 0.5 );
 }
