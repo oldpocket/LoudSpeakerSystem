@@ -1,6 +1,6 @@
-# LoadSpeakerSystem
-LSS - LoadSpeaker System
+# LoudSpeakerSystem
+LSS - LoudSpeaker System
 
-LoadSpeaker System is a collection of classes to be used in the calculation of parameters necessary to build a LoadSpeaker.
+LoudSpeaker System is a collection of classes to be used in the calculation of parameters necessary to build a Loud Speaker.
 
 Still work in progress. Very early stage.
