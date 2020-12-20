@@ -1,4 +1,4 @@
 [Project]
 CreatedFrom=Makefile
 Manager=KDevCustomMakeManager
-Name=LoadSpeakerSystem
+Name=LoudSpeakerSystem
