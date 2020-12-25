@@ -13,6 +13,8 @@ public:
     TClosedBox(TDriver driver_);
     ~TClosedBox();
     virtual TBoxResponse<float, 20, 200> getBoxResponse() override;
+    virtual float getVb() override;
+    virtual void setVb(float vb_) override;
 
     // Box Volume
     float vb;

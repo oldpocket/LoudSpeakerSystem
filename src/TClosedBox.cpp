@@ -37,6 +37,15 @@ TBoxResponse<float, MIN_FREQUENCY, MAX_FREQUENCY> TClosedBox::getBoxResponse() {
   return response;
 }
 
+float TClosedBox::getVb() {
+    return vb;
+}
+
+void TClosedBox::setVb(float vb_) {
+    vb = vb_;
+}
+
+
 float TClosedBox::getF3() {
          
   return getFC() * sqrt(((1 / SQR(getQTC()) - 2) + sqrt(SQR(1 / SQR(getQTC()) - 2) + 4)) / 2);
