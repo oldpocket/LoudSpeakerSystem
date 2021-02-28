@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include "TVentedBox.hpp"
 #include "OPExceptions.hpp"
 #include "OPMacros.hpp"
@@ -47,10 +47,18 @@ float TVentedBox::getBoxResponseAtF(float f_) {
     return response;
 }
 
-PortDimension TVentedBox::getPortDimension(PortShapes portShape_) {
+PortDimension TVentedBox::getPortDimension(PortShapes portShape_, float lenght_) {
     PortDimension pd = { .0f, .0f, .0f };
     
     if (portShape_ == TUBULAR) {
+        float Vb = getVb();
+        float Fb = getFB();
+        float D = lenght_;
+        float SV = pow(D/2, 2) * 3.1416;
+        float A = .0000332 * Vb * Fb * Fb;
+        float L = (SV / A) - (.83 * SQR(SV));
+        float LVD = ((29290 * SV) / (Fb * Fb * Vb)) - D;
+        
     }
     
     if (portShape_ == RECTANGULAR) {

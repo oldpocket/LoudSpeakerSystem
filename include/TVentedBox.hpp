@@ -20,7 +20,7 @@ public:
     virtual void setVb(float vb_) override;
 
     float getBoxResponseAtF(float f_);
-    PortDimension getPortDimension(PortShapes portShape_);
+    PortDimension getPortDimension(PortShapes portShape_, float lenght_);
 
     // Box Volume - dinamically calculated or last user-defined value
     float getVB();
