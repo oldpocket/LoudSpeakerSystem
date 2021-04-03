@@ -4,8 +4,7 @@
 #include "OPMacros.hpp"
 
 
-TDoubleChamberReflexBox::TDoubleChamberReflexBox(TDriver driver_) : TBox(driver_)
-{
+TDoubleChamberReflexBox::TDoubleChamberReflexBox(TDriver driver_) : TBox(driver_) {
 }
 
 /*
