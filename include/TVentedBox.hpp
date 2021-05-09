@@ -21,6 +21,16 @@ public:
 
     float getBoxResponseAtF(float f_);
     PortDimension getPortDimension(PortShapes portShape_, float lenght_);
+    float tunedFrequency(
+        float _freqPeakBellowFb, // FL
+        float _freqPeakAboveFb,  // FH
+        float _freqWithPortClosed // FC
+    ); // FB
+    float qualityOfTheBox(
+        float _freqPeakBellowFb, 
+        float _freqPeakAboveFb,
+        float _impedanceAtFb
+    );
 
     // Box Volume - dinamically calculated or last user-defined value
     float getVB();

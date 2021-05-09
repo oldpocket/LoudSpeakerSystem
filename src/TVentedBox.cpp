@@ -68,6 +68,27 @@ PortDimension TVentedBox::getPortDimension(PortShapes portShape_, float lenght_)
 }
 
 
+float TVentedBox::tunedFrequency(float _freqPeakBellowFb, float _freqPeakAboveFb, float _freqWithPortClosed)
+{
+    float fb = sqrt(pow(_freqPeakBellowFb,2) + pow(_freqPeakAboveFb,2) - pow(_freqWithPortClosed, 2));
+    
+    return fb;
+}
+
+float TVentedBox::qualityOfTheBox(float _freqPeakBellowFb, float _freqPeakAboveFb, float _impedanceAtFb) {
+    
+    float fsb = (_freqPeakAboveFb * _freqPeakBellowFb) / getFB();
+    float rm = _impedanceAtFb / driver.re;
+    float qmsb = (driver.fs / fsb) * driver.getQMS();
+    float qesb = (driver.fs / fsb) * driver.getQTS();
+    float h = tunedFrequency(_freqPeakBellowFb, _freqPeakAboveFb, 0) / fsb;
+    float a = (pow(_freqPeakAboveFb, 2) - pow(_freqPeakBellowFb, 2)) * ( pow(_freqPeakBellowFb, 2) - pow(_freqPeakAboveFb,2)) / (pow(_freqPeakAboveFb,2) * pow(_freqPeakBellowFb,2));
+    float ql = (h / a) * (( 1 / (qesb * (rm - 1 ))) - (1 / qmsb));
+    
+    return ql;
+}
+
+
 float TVentedBox::getF3() {
     
     if (vb == 0)
